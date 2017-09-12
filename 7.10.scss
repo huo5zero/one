@@ -1,0 +1,36 @@
+@charset 'utf-8';
+$color:lightgray;
+$size:25px;
+$width1:300px;
+$width1:200px !default;
+$height1:300px;
+$border1:1px solid black;
+$float1:right;
+body{
+    background:$color;
+    font-size:$size;
+}
+table{
+    width:600px;
+    border:1px solid black;
+    text-align: center;
+}
+td{
+    border:1px solid black;
+    width:150px;
+}
+div{
+    width:$width1;
+    height:$height1;
+    border:$border1;
+    border:$border1;
+    float:$float1;
+    border-#{$float1}:10px solid black;
+    span{
+        color:red;
+    }
+    a{
+        color:yellow;
+        text-decoration: none;
+    }
+}

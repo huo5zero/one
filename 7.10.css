@@ -1,0 +1,27 @@
+body {
+  background: lightgray;
+  font-size: 25px; }
+
+table {
+  width: 600px;
+  border: 1px solid black;
+  text-align: center; }
+
+td {
+  border: 1px solid black;
+  width: 150px; }
+
+div {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border: 1px solid black;
+  float: right;
+  border-right: 10px solid black; }
+  div span {
+    color: red; }
+  div a {
+    color: yellow;
+    text-decoration: none; }
+
+/*# sourceMappingURL=7.10.css.map */

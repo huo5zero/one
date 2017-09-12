@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="7.10.css"/>
+		<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+	</head>
+	<body>
+		<div>
+			123
+			<span>
+				456
+			</span>
+			<a href="">789</a>
+		</div>
+		<button>学生数据1</button>
+		<button>学生数据2</button>
+		<button>学生数据3</button>
+		<button>学生数据4</button>
+		<button>学生数据5</button>
+		<button id='all'>全部数据</button>
+		<table>
+			<tr>
+				<th>姓名</th><th>年龄</th><th>性别</th><th>班级</th>
+			</tr>
+		</table>
+	</body>
+	<script>
+		var Btn=document.getElementsByTagName('button');
+		var obj={
+			name:['野上空','野上歌','姬雏菊','亚瑟','伊莎贝拉'],
+			age :['16','16','17','18','19'],
+			sex :['男','女','女','女','男'],
+			classRom:['2-A','2-A','2-A','2-B','2-A']
+		}
+		for(var i=0;i<Btn.length;i++){
+			Btn[i].index=i;
+			Btn[i].onclick=function(){
+				$('tr').eq(0).nextAll().remove();
+				$('table').append($('<tr><td>'+obj.name[this.index]+'</td><td>'+obj.age[this.index]+'</td><td>'+obj.sex[this.index]+'</td><td>'+obj.classRom[this.index]+'</td></tr>'))
+			}
+		}
+		var all=document.querySelector('#all');
+		all.onclick=function(){
+			$('tr').eq(0).nextAll().remove();
+			for(var i=0;i<Btn.length-1;i++){
+				$('table').append($('<tr><td>'+obj.name[i]+'</td><td>'+obj.age[i]+'</td><td>'+obj.sex[i]+'</td><td>'+obj.classRom[i]+'</td></tr>'))
+			}
+		}
+	</script>
+</html>
